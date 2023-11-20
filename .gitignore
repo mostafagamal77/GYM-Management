@@ -1,13 +1,9 @@
 # js files
 js/main.js
 js/auth.js
-js/bootstrap.bundle.min.js
 js/bootstrap.bundle.min.js.map
-js/all.min.js
 
 # ----------
 # css files
-css/all.min.css
-css/bootstrap.min.css
 css/bootstrap.min.css.map
 
