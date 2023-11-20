@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trainee</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="d-flex flex-column flex-md-row">
+      <div
+        class="sidebar p-3 col-auto bg-dark text-light position-sticky position-relative"
+      >
+        <div class="head py-3 mb-5 position-relative text-center">
+          <a
+            href="home.html"
+            class="fs-4 d-block mb-2 fw-medium text-light text-decoration-none"
+          >
+            <i class="fa-solid fa-dumbbell"></i> Gym Management
+          </a>
+        </div>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-3">
+            <a
+              class="nav-link p-2 rounded-3 text-bg-dark fw-medium"
+              href="home.html"
+              ><i class="fa-solid fa-house-user"></i> Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link p-2 rounded-3 text-bg-dark fw-medium"
+              href="addCustomer.html"
+              ><i class="fa-solid fa-user"></i> Add Trainee</a
+            >
+          </li>
+        </ul>
+        <a
+          href="#"
+          class="d-block position-absolute bg-danger text-bg-danger rounded-pill sign-out"
+          >Sign Out</a
+        >
+      </div>
+      <div class="col d-flex">
+        <div class="p-2 position-sticky d-none d-md-block shadow"></div>
+
+        <section class="col bg-dark section-content">
+          <nav class="navbar bg-dark navbar-dark p-3">
+            <div class="container-fluid">
+              <a class="navbar-brand fw-medium fs-4 text-bg-dark" href="#"
+                >Tiger GYM</a
+              >
+            </div>
+          </nav>
+          <div class="alert alert-success text-center" role="alert">
+            You Renew the plan successfully
+          </div>
+          <div class="d-flex justify-content-between p-3 my-3">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a class="text-decoration-underline" href="home.html">Home</a>
+                </li>
+                <li
+                  class="breadcrumb-item text-secondary text-capitalize active"
+                  id="username"
+                  aria-current="page"
+                ></li>
+              </ol>
+            </nav>
+            <div class="user-id text-bg-dark fw-medium">ID: <span></span></div>
+          </div>
+          <div class="container">
+            <div class="responsive-table">
+              <table
+                class="table table-dark table-striped table-bordered"
+              ></table>
+            </div>
+            <div class="btn-content text-center py-5"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script type="module" src="js/view.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

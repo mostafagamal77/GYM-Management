@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit User</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="d-flex flex-column flex-md-row">
+      <div
+        class="sidebar p-3 col-auto bg-dark text-light position-relative"
+      >
+        <div class="head py-3 mb-5 position-relative text-center">
+          <a
+            href="home.html"
+            class="fs-4 d-block mb-2 fw-medium text-light text-decoration-none"
+          >
+            <i class="fa-solid fa-dumbbell"></i> Gym Management
+          </a>
+        </div>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-3">
+            <a
+              class="nav-link p-2 rounded-3 text-bg-dark fw-medium"
+              href="home.html"
+              ><i class="fa-solid fa-house-user"></i> Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link p-2 rounded-3 text-bg-dark fw-medium"
+              href="addCustomer.html"
+              ><i class="fa-solid fa-user"></i> Add Trainee</a
+            >
+          </li>
+        </ul>
+        <a
+          href="#"
+          class="d-block position-absolute bg-danger text-bg-danger rounded-pill sign-out"
+          >Sign Out</a
+        >
+      </div>
+      <div class="d-flex">
+        <div class="p-2 position-sticky d-none d-md-block shadow"></div>
+        <section class="col bg-dark section-content">
+          
+          <nav class="navbar bg-dark navbar-dark p-3">
+            <div class="container-fluid">
+              <a class="navbar-brand fw-medium fs-4 text-bg-dark" href="#"
+                >Tiger GYM</a
+              >
+              
+            </div>
+          </nav>
+          <div class="alert alert-success text-center" role="alert">
+            Information updated successfully
+          </div>
+          <div class="d-flex justify-content-between p-3 my-3">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a class="text-decoration-underline" href="home.html">Home</a>
+                </li>
+                <li
+                  class="breadcrumb-item text-secondary text-capitalize active"
+                  id="username"
+                  aria-current="page"
+                ></li>
+              </ol>
+            </nav>
+            <div class="user-id text-bg-dark fw-medium">ID: <span></span></div>
+          </div>
+          
+          <div>
+            <form action="" class="row mx-0 p-3 form-data">
+              <div class="col-md-6 mb-3">
+                <label for="name" class="text-bg-dark">Name:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="username"
+                  placeholder="Trainee Name..."
+                  class="form-control mt-2 bg-transparent text-bg-dark border-0"
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="phone" class="text-bg-dark">Phone:</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Phone..."
+                  class="form-control mt-2 bg-transparent text-bg-dark border-0"
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="age" class="text-bg-dark">Age:</label>
+                <input
+                  type="number"
+                  id="age"
+                  name="age"
+                  placeholder="Age..."
+                  class="form-control mt-2 bg-transparent text-bg-dark border-0"
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="adress" class="text-bg-dark">Address:</label>
+                <input
+                  type="text"
+                  id="address"
+                  name="address"
+                  placeholder="Address..."
+                  class="form-control mt-2 bg-transparent text-bg-dark border-0"
+                />
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="gender" class="text-bg-dark">Gender:</label>
+                <select
+                  name="gender"
+                  id="gender"
+                  class="form-control mt-2 bg-transparent text-bg-dark"
+                >
+                  <option class="bg-dark text-bg-dark" disabled hidden selected>
+                    Choose here ...
+                  </option>
+                  <option value="Male" class="bg-dark text-bg-dark">Male</option>
+                  <option value="Female" class="bg-dark text-bg-dark">
+                    Female
+                  </option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label for="plan" class="text-bg-dark">Plan:</label>
+                <select
+                  name="plan"
+                  id="plan"
+                  class="form-control mt-2 bg-transparent text-bg-dark"
+                >
+                  <option class="bg-dark text-bg-dark" value="choose" disabled hidden selected>
+                    Choose Plan ...
+                  </option>
+                  <option value="Month" class="bg-dark text-bg-dark">
+                    Month
+                  </option>
+                  <option value="3 Months" class="bg-dark text-bg-dark">
+                    3 Months
+                  </option>
+                  <option value="6 Months" class="bg-dark text-bg-dark">
+                    6 Months
+                  </option>
+                  <option value="Year" class="bg-dark text-bg-dark">Year</option>
+                  <option value="Day" class="bg-dark text-bg-dark">Day</option>
+                </select>
+              </div>
+              <div class="col-12 my-5">
+                <button class="btn btn-success me-2" id="update">Update</button>
+                <button
+                  class="btn btn-danger"
+                  id="delete"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal"
+                >
+                  Delete
+                </button>
+                <div class="modal-container">
+                  <div
+                    class="modal fade"
+                    id="modal"
+                    tabindex="-1"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content bg-dark text-bg-dark">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" >
+                            Delete Trainee
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close bg-light"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">
+                          Are You Sure You Want To Delete This Trainee?
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-danger"
+                            id="delete-trainee"
+                          >
+                            Delete
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script type="module" src="js/edit.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

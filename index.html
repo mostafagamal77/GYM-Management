@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div
+      class="all-content min-vh-100 position-relative bg-dark d-flex justify-content-center align-items-center"
+    >
+      <div class="container">
+        <div class="page-content p-4 rounded-4">
+          <h2 class="text-bg-dark mb-5">Welcome, Sign in Gym Management</h2>
+          <p
+            class="bg-white w-50 mx-auto p-2 rounded-3 fw-bold text-danger border border-2 border-danger text-center invalid"
+          >
+            Invalid Email Or Password
+          </p>
+          <div class="container sign-content">
+            <label for="emailSignIn" class="text-bg-dark mb-2">Email</label>
+            <input
+              class="form-control bg-dark text-bg-dark mb-3"
+              placeholder="Enter Your Email..."
+              type="email"
+              id="emailSignIn"
+              value="mostafa@admin.com"
+            />
+            <label for="pass" class="text-bg-dark mb-2">Password</label>
+            <input
+              class="form-control bg-dark text-bg-dark mb-3"
+              placeholder="Enter Your Password..."
+              type="password"
+              value="mostafaadmin1234"
+              name=""
+              id="pass"
+            />
+
+            <div class="text-center mt-4">
+              <button class="btn btn-primary fw-medium sign-in">Sign In</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <!-- <script type="module" src="js/main.js"></script> -->
+    <script type="module" src="js/auth.js"></script>
+  </body>
+</html>
+
